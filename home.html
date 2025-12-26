@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTonisi Business Consultants | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/270311404448" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="home.html">
+                    <div class="logo-main">LaTonisi</div>
+                    <div class="logo-subtitle">Business Consultants</div>
+                    <div class="logo-tagline">Empowering Dreams • Nurturing Success</div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="founder.html">Founder</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="enquiry.html" class="cta-button">Get Started</a></li>
+                </ul>
+                <a href="enquiry.html" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">Secure Business Funding <span>That Works</span></h1>
+                <p class="hero-subtitle">Our tailored business plans have successfully secured over R50 million in funding for entrepreneurs across South Africa. Transform your vision into reality with expert guidance.</p>
+                <a href="services.html" class="cta-button">Explore Our Services</a>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">R50M+</div>
+                        <div class="stat-label">Funding Secured</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Enquiry & Location Section -->
+    <section class="enquiry-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-subtitle">Fill out our quick enquiry form or visit our office</p>
+            </div>
+
+            <div class="enquiry-container">
+                <!-- Quick Enquiry Form -->
+                <div class="enquiry-form fade-in">
+                    <h3>Quick Enquiry</h3>
+                    <p>Interested in our services? Fill out this quick form and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="quickEnquiryForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="business-plan">Business Plan</option>
+                                <option value="funding-proposal">Funding Proposal</option>
+                                <option value="company-registration">Company Registration</option>
+                                <option value="compliance">Compliance Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%; border: none;">Submit Enquiry</button>
+                        <p style="margin-top: 16px; font-size: 0.9rem; text-align: center;">
+                            Need more options? <a href="enquiry.html" style="color: var(--primary-red); font-weight: 600;">Visit our full enquiry form</a>
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="map-container fade-in">
+                    <h3 style="padding: 20px 20px 0;">Find Us</h3>
+                    <p style="padding: 0 20px; font-size: 0.95rem; color: var(--medium-gray);">
+                        <i class="fas fa-map-marker-alt" style="color: var(--primary-red);"></i>
+                        303 Anton Lembede Street, Durban
+                    </p>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.8964!2d31.0276!3d-29.8587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7aa2d6c3b3b3b%3A0x1234567890abcdef!2s303%20Anton%20Lembede%20St%2C%20Durban%20Central%2C%20Durban%2C%204001!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="LaTonisi Business Consultants Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo-container" style="align-items: flex-start; margin-bottom: 20px;">
+                        <div class="logo-main" style="color: white; font-size: 1.8rem;">LaTonisi</div>
+                        <div class="logo-subtitle" style="color: rgba(255,255,255,0.8);">Business Consultants (PTY) LTD</div>
+                        <div class="logo-tagline" style="color: rgba(255,255,255,0.6);">Empowering Dreams • Nurturing Success</div>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7);">Transforming entrepreneurial vision into funded reality with expert business consultancy services across South Africa.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>303 Anton Lembede Street, Durban</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@latonisi.co.za</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>031 140 4448</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="services.html">Business Plans</a>
+                    <a href="services.html">Funding Proposals</a>
+                    <a href="services.html">Company Registration</a>
+                    <a href="services.html">Compliance Services</a>
+                    <a href="pricing.html">Business Funding</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href="founder.html">Our Founder</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="enquiry.html">Enquiry</a>
+                    <a href="services.html">All Services</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p>Emergency consultations available</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2024 LaTonisi Business Consultants (PTY) LTD. All Rights Reserved.</p>
+                <p>Designed by SABI Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

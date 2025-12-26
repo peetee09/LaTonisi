@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Founder | LaTonisi Business Consultants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .founder-section {
+            padding: 100px 0;
+            background: #f0f2f5;
+            position: relative;
+        }
+
+        .founder-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,180 Q100,20 180,180' stroke='%23d32f2f' stroke-width='1.5' fill='none' stroke-opacity='0.1'/%3E%3Cpath d='M40,160 Q100,40 160,160' stroke='%23d32f2f' stroke-width='1.5' fill='none' stroke-opacity='0.08'/%3E%3Ccircle cx='100' cy='100' r='2' fill='%23d32f2f' fill-opacity='0.2'/%3E%3Ccircle cx='150' cy='120' r='2' fill='%23d32f2f' fill-opacity='0.2'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-info h2 {
+            color: var(--dark-gray);
+        }
+
+        .founder-title {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .founder-bio {
+            margin-bottom: 32px;
+            background: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .founder-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .founder-stat {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .founder-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 8px;
+        }
+
+        .founder-stat-label {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, var(--light-red), var(--primary-red));
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .award-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(211, 47, 47, 0.4);
+            border: 3px solid var(--white);
+        }
+
+        .award-badge i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .founder-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .founder-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-img {
+                height: 400px;
+                font-size: 1.8rem;
+            }
+
+            .award-badge {
+                position: relative;
+                bottom: 0;
+                right: 0;
+                margin-top: 20px;
+                max-width: 250px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .founder-img {
+                height: 300px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/270311404448" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="home.html">
+                    <div class="logo-main">LaTonisi</div>
+                    <div class="logo-subtitle">Business Consultants</div>
+                    <div class="logo-tagline">Empowering Dreams • Nurturing Success</div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="founder.html">Founder</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="enquiry.html" class="cta-button">Get Started</a></li>
+                </ul>
+                <a href="enquiry.html" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Founder Section -->
+        <section class="founder-section">
+            <div class="container">
+                <div class="founder-content fade-in">
+                    <div class="founder-info">
+                        <div class="founder-title">CHIEF CONSULTANT & DIRECTOR</div>
+                        <h2>Mzwakhe Xulu</h2>
+                        <div class="founder-bio">
+                            <p>A visionary business development strategist and award-winning innovator with over five years of experience. Successfully raised R375,000 for his own startup and has helped secure over R50 million in funding for clients across diverse sectors.</p>
+                            <p>Mzwakhe's firsthand entrepreneurial experience combined with his strategic expertise makes him uniquely qualified to guide businesses from concept to successful funding and beyond.</p>
+                        </div>
+                        
+                        <div class="founder-stats">
+                            <div class="founder-stat">
+                                <div class="founder-stat-number">5+</div>
+                                <div class="founder-stat-label">Years Experience</div>
+                            </div>
+                            <div class="founder-stat">
+                                <div class="founder-stat-number">R375K</div>
+                                <div class="founder-stat-label">Personal Funding Raised</div>
+                            </div>
+                            <div class="founder-stat">
+                                <div class="founder-stat-number">200+</div>
+                                <div class="founder-stat-label">Businesses Helped</div>
+                            </div>
+                            <div class="founder-stat">
+                                <div class="founder-stat-number">15+</div>
+                                <div class="founder-stat-label">Industry Awards</div>
+                            </div>
+                        </div>
+                        
+                        <a href="enquiry.html" class="cta-button" style="display: inline-block;">Schedule a Consultation</a>
+                    </div>
+                    
+                    <div class="founder-image">
+                        <div class="founder-img">
+                            MZWAKHE XULU
+                        </div>
+                        <div class="award-badge">
+                            <i class="fas fa-trophy"></i>
+                            <div>2024 Innovation Award Winner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo-container" style="align-items: flex-start; margin-bottom: 20px;">
+                        <div class="logo-main" style="color: white; font-size: 1.8rem;">LaTonisi</div>
+                        <div class="logo-subtitle" style="color: rgba(255,255,255,0.8);">Business Consultants (PTY) LTD</div>
+                        <div class="logo-tagline" style="color: rgba(255,255,255,0.6);">Empowering Dreams • Nurturing Success</div>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7);">Transforming entrepreneurial vision into funded reality with expert business consultancy services across South Africa.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>303 Anton Lembede Street, Durban</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@latonisi.co.za</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>031 140 4448</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="services.html">Business Plans</a>
+                    <a href="services.html">Funding Proposals</a>
+                    <a href="services.html">Company Registration</a>
+                    <a href="services.html">Compliance Services</a>
+                    <a href="pricing.html">Business Funding</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href="founder.html">Our Founder</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="enquiry.html">Enquiry</a>
+                    <a href="services.html">All Services</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p>Emergency consultations available</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2024 LaTonisi Business Consultants (PTY) LTD. All Rights Reserved.</p>
+                <p>Designed by SABI Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
