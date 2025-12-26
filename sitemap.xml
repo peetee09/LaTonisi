@@ -52,4 +52,12 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- HTML Sitemap -->
+    <url>
+        <loc>https://peetee09.github.io/LaTonisi/sitemap.html</loc>
+        <lastmod>2024-12-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
 </urlset>
