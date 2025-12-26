@@ -181,6 +181,21 @@ nav {
     color: var(--dark-gray);
     cursor: pointer;
     z-index: 1001;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.mobile-menu-btn::before {
+    content: '☰';
+    font-size: 1.8rem;
+    line-height: 1;
+    display: block;
+}
+
+.mobile-menu-btn.active::before {
+    content: '✕';
+    font-size: 2rem;
 }
 
 /* Page Content */
@@ -374,8 +389,13 @@ nav {
     justify-content: center;
     margin-bottom: 24px;
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 2rem;
     box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.service-icon::before {
+    content: attr(data-icon);
+    font-size: 2rem;
 }
 
 .service-card h3 {
@@ -580,6 +600,11 @@ footer::before {
     transition: var(--transition);
     z-index: 1000;
     border: 2px solid var(--white);
+}
+
+.whatsapp-float::before {
+    content: '📱';
+    font-size: 2rem;
 }
 
 .whatsapp-float:hover {

@@ -5,14 +5,12 @@ const navLinks = document.getElementById('navLinks');
 if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
-        
-        // Prevent body scroll when menu is open
+        // Toggle between hamburger and X icon using CSS
         if (navLinks.classList.contains('active')) {
+            mobileMenuBtn.classList.add('active');
             document.body.style.overflow = 'hidden';
         } else {
+            mobileMenuBtn.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
@@ -21,7 +19,7 @@ if (mobileMenuBtn && navLinks) {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.classList.remove('active');
             document.body.style.overflow = '';
         });
     });
@@ -32,7 +30,7 @@ if (mobileMenuBtn && navLinks) {
             const isClickInsideNav = navLinks.contains(event.target) || mobileMenuBtn.contains(event.target);
             if (!isClickInsideNav && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
             }
         }
