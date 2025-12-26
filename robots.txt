@@ -4,8 +4,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://peetee09.github.io/LaTonisi/sitemap.xml
-
 # Crawl-delay (optional - helps prevent server overload)
 Crawl-delay: 1
