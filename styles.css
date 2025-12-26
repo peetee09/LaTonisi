@@ -783,3 +783,25 @@ footer::before {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Testimonials */
+.testimonial-rating {
+    color: #ffd700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.testimonial-rating i {
+    margin-right: 4px;
+}
+
+.testimonial-author {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(211, 47, 47, 0.1);
+}
+
+.testimonial-author strong {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+}
