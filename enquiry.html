@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form | LaTonisi Business Consultants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .enquiry-full-section {
+            padding: 100px 0;
+            background: #f0f2f5;
+        }
+
+        .enquiry-form-full {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .enquiry-form-full h2 {
+            color: var(--dark-gray);
+            margin-bottom: 12px;
+        }
+
+        .enquiry-form-full .intro-text {
+            color: var(--medium-gray);
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid rgba(211, 47, 47, 0.1);
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+        }
+
+        .form-section h3 {
+            color: var(--dark-gray);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .enquiry-form-full {
+                padding: 30px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .enquiry-form-full {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/270311404448" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="home.html">
+                    <div class="logo-main">LaTonisi</div>
+                    <div class="logo-subtitle">Business Consultants</div>
+                    <div class="logo-tagline">Empowering Dreams • Nurturing Success</div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="founder.html">Founder</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="enquiry.html" class="cta-button">Get Started</a></li>
+                </ul>
+                <a href="enquiry.html" class="cta-button">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Full Enquiry Form Section -->
+        <section class="enquiry-full-section">
+            <div class="container">
+                <div class="enquiry-form-full fade-in">
+                    <h2>Complete Enquiry Form</h2>
+                    <p class="intro-text">Please fill out this comprehensive form so we can better understand your needs and provide you with tailored solutions. All information is kept strictly confidential.</p>
+                    
+                    <form id="fullEnquiryForm">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="emailFull">Email Address *</label>
+                                    <input type="email" id="emailFull" name="emailFull" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phoneFull">Phone Number *</label>
+                                    <input type="tel" id="phoneFull" name="phoneFull" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="altPhone">Alternative Phone Number</label>
+                                <input type="tel" id="altPhone" name="altPhone">
+                            </div>
+                        </div>
+
+                        <!-- Business Information -->
+                        <div class="form-section">
+                            <h3>Business Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="businessName">Business/Company Name</label>
+                                <input type="text" id="businessName" name="businessName">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="businessType">Business Type</label>
+                                    <select id="businessType" name="businessType">
+                                        <option value="">Select business type</option>
+                                        <option value="sole-proprietor">Sole Proprietor</option>
+                                        <option value="pty-ltd">PTY LTD</option>
+                                        <option value="npo">NPO</option>
+                                        <option value="npc">NPC</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="startup">Startup (Not Yet Registered)</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="industry">Industry/Sector *</label>
+                                    <select id="industry" name="industry" required>
+                                        <option value="">Select industry</option>
+                                        <option value="agriculture">Agriculture</option>
+                                        <option value="construction">Construction</option>
+                                        <option value="education">Education</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="hospitality">Hospitality & Tourism</option>
+                                        <option value="it-tech">IT & Technology</option>
+                                        <option value="manufacturing">Manufacturing</option>
+                                        <option value="retail">Retail</option>
+                                        <option value="transport">Transport & Logistics</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="businessStage">Business Stage</label>
+                                <select id="businessStage" name="businessStage">
+                                    <option value="">Select stage</option>
+                                    <option value="idea">Idea/Concept Stage</option>
+                                    <option value="startup">Startup (0-2 years)</option>
+                                    <option value="growth">Growth Stage (2-5 years)</option>
+                                    <option value="established">Established (5+ years)</option>
+                                    <option value="expansion">Looking to Expand</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Service Requirements -->
+                        <div class="form-section">
+                            <h3>Service Requirements</h3>
+                            
+                            <div class="form-group">
+                                <label for="primaryService">Primary Service Required *</label>
+                                <select id="primaryService" name="primaryService" required>
+                                    <option value="">Select primary service</option>
+                                    <option value="business-plan-starter">Business Plan - Starter (R3,000)</option>
+                                    <option value="business-plan-accelerator">Business Plan - Accelerator (R8,000)</option>
+                                    <option value="business-plan-executive">Business Plan - Executive (R12,000)</option>
+                                    <option value="funding-proposal">Funding Proposal (R2,500)</option>
+                                    <option value="company-registration">Company Registration (From R500)</option>
+                                    <option value="npo-npc-registration">NPO/NPC Registration (R750)</option>
+                                    <option value="compliance">Compliance Services</option>
+                                    <option value="licensing">Licensing Services</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="other">Other (Please specify below)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fundingAmount">Expected Funding Amount (if applicable)</label>
+                                <select id="fundingAmount" name="fundingAmount">
+                                    <option value="">Select funding range</option>
+                                    <option value="under-100k">Under R100,000</option>
+                                    <option value="100k-500k">R100,000 - R500,000</option>
+                                    <option value="500k-1m">R500,000 - R1 Million</option>
+                                    <option value="1m-3m">R1 Million - R3 Million</option>
+                                    <option value="3m-10m">R3 Million - R10 Million</option>
+                                    <option value="10m-50m">R10 Million - R50 Million</option>
+                                    <option value="50m-100m">R50 Million - R100 Million</option>
+                                    <option value="over-100m">Over R100 Million</option>
+                                    <option value="not-applicable">Not Applicable</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Required Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="urgent">Urgent (Within 1 week)</option>
+                                    <option value="1-2-weeks">1-2 Weeks</option>
+                                    <option value="2-4-weeks">2-4 Weeks</option>
+                                    <option value="1-2-months">1-2 Months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="projectDetails">Project Details & Requirements *</label>
+                                <textarea id="projectDetails" name="projectDetails" rows="6" required placeholder="Please provide detailed information about your project, goals, and any specific requirements..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="challenges">Current Challenges or Concerns</label>
+                                <textarea id="challenges" name="challenges" rows="4" placeholder="What challenges are you currently facing that we can help address?"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="referralSource">How did you hear about us?</label>
+                                <select id="referralSource" name="referralSource">
+                                    <option value="">Select source</option>
+                                    <option value="google">Google Search</option>
+                                    <option value="social-media">Social Media</option>
+                                    <option value="referral">Referral</option>
+                                    <option value="website">Website</option>
+                                    <option value="advertisement">Advertisement</option>
+                                    <option value="event">Event/Conference</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Preferred Contact -->
+                        <div class="form-section">
+                            <h3>Preferred Contact Method</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactMethod">Contact Method *</label>
+                                    <select id="contactMethod" name="contactMethod" required>
+                                        <option value="">Select method</option>
+                                        <option value="email">Email</option>
+                                        <option value="phone">Phone Call</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                        <option value="in-person">In-Person Meeting</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactTime">Preferred Contact Time</label>
+                                    <select id="contactTime" name="contactTime">
+                                        <option value="">Select time</option>
+                                        <option value="morning">Morning (8AM - 12PM)</option>
+                                        <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                        <option value="anytime">Anytime</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta-button" style="width: 100%; border: none; font-size: 1.1rem; padding: 16px;">Submit Enquiry</button>
+                        
+                        <p style="margin-top: 24px; font-size: 0.9rem; text-align: center; color: var(--medium-gray);">
+                            We typically respond to enquiries within 24 hours during business days. For urgent matters, please call us at <strong style="color: var(--primary-red);">031 140 4448</strong> or WhatsApp us directly.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo-container" style="align-items: flex-start; margin-bottom: 20px;">
+                        <div class="logo-main" style="color: white; font-size: 1.8rem;">LaTonisi</div>
+                        <div class="logo-subtitle" style="color: rgba(255,255,255,0.8);">Business Consultants (PTY) LTD</div>
+                        <div class="logo-tagline" style="color: rgba(255,255,255,0.6);">Empowering Dreams • Nurturing Success</div>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7);">Transforming entrepreneurial vision into funded reality with expert business consultancy services across South Africa.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>303 Anton Lembede Street, Durban</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@latonisi.co.za</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>031 140 4448</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="services.html">Business Plans</a>
+                    <a href="services.html">Funding Proposals</a>
+                    <a href="services.html">Company Registration</a>
+                    <a href="services.html">Compliance Services</a>
+                    <a href="pricing.html">Business Funding</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="home.html">Home</a>
+                    <a href="founder.html">Our Founder</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="enquiry.html">Enquiry</a>
+                    <a href="services.html">All Services</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p>Emergency consultations available</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2024 LaTonisi Business Consultants (PTY) LTD. All Rights Reserved.</p>
+                <p>Designed by SABI Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
