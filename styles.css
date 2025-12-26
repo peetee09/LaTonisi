@@ -795,6 +795,11 @@ footer::before {
     margin-right: 4px;
 }
 
+.testimonial-text {
+    font-style: italic;
+    margin: 20px 0;
+}
+
 .testimonial-author {
     margin-top: 20px;
     padding-top: 20px;
@@ -804,4 +809,10 @@ footer::before {
 .testimonial-author strong {
     color: var(--dark-gray);
     font-size: 1.1rem;
+}
+
+.testimonial-company {
+    display: block;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
 }
