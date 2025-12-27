@@ -103,12 +103,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (header) {
-        if (window.scrollY > 100) {
-            header.style.padding = '6px 0';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.padding = '12px 0';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+        const headerContainer = header.querySelector('.header-container');
+        if (headerContainer) {
+            if (window.scrollY > 100) {
+                headerContainer.style.padding = '6px 24px';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                headerContainer.style.padding = '12px 24px';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+            }
         }
     }
 });
