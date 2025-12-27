@@ -838,7 +838,7 @@ footer::before {
     }
     
     .footer-logo-image {
-        height: 45px;
+        height: 40px;
     }
     
     .contact-info {
@@ -922,10 +922,6 @@ footer::before {
     
     .enquiry-form {
         padding: 30px 20px;
-    }
-    
-    .footer-logo-image {
-        height: 35px;
     }
 }
 
