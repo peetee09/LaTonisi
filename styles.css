@@ -60,14 +60,19 @@ p {
 
 /* Modern Header */
 header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
+    border-bottom: 1px solid rgba(211, 47, 47, 0.08);
+}
+
+header:hover {
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
 }
 
 .header-container {
@@ -79,13 +84,34 @@ header {
 
 .logo-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo-container a {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
 }
 
 .logo-main {
@@ -162,17 +188,42 @@ nav {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid var(--primary-red);
     font-size: 0.95rem;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .cta-button:hover {
     background: var(--dark-red);
     border-color: var(--dark-red);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.2);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
 }
 
 .mobile-menu-btn {
@@ -359,7 +410,7 @@ nav {
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(211, 47, 47, 0.1);
     position: relative;
     overflow: hidden;
@@ -373,12 +424,17 @@ nav {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(211, 47, 47, 0.15);
-    border-color: rgba(211, 47, 47, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 24px 48px rgba(211, 47, 47, 0.2);
+    border-color: rgba(211, 47, 47, 0.25);
+}
+
+.service-card:hover::before {
+    height: 6px;
 }
 
 .service-icon {
@@ -483,8 +539,9 @@ nav {
     border: 2px solid rgba(211, 47, 47, 0.1);
     border-radius: 8px;
     font-size: 1rem;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: inherit;
+    background: var(--white);
 }
 
 .form-group input:focus,
@@ -492,6 +549,8 @@ nav {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+    transform: translateY(-1px);
 }
 
 .form-group textarea {
@@ -531,6 +590,27 @@ footer::before {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-logo-image {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-content {
@@ -599,9 +679,10 @@ footer::before {
     font-size: 1.8rem;
     text-decoration: none;
     box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     border: 2px solid var(--white);
+    animation: pulse 2s infinite;
 }
 
 .whatsapp-float::before {
@@ -610,8 +691,27 @@ footer::before {
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(5deg);
     box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 36px rgba(37, 211, 102, 0.6);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float {
+        animation: none;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
 }
 
 /* Responsive Design */
@@ -636,6 +736,22 @@ footer::before {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+    }
+    
+    .logo-image {
+        height: 40px;
+    }
+    
+    .logo-main {
+        font-size: 1.5rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.7rem;
+    }
+    
+    .logo-tagline {
+        font-size: 0.6rem;
     }
     
     .nav-links {
