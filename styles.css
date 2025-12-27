@@ -837,6 +837,10 @@ footer::before {
         text-align: center;
     }
     
+    .footer-logo-image {
+        height: 40px;
+    }
+    
     .contact-info {
         align-items: center;
     }
