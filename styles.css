@@ -541,7 +541,7 @@ nav {
     font-size: 1rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: inherit;
-    background: #ffffff;
+    background: var(--white);
 }
 
 .form-group input:focus,
@@ -702,6 +702,15 @@ footer::before {
     }
     50% {
         box-shadow: 0 8px 36px rgba(37, 211, 102, 0.6);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float {
+        animation: none;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
     }
 }
 
