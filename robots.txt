@@ -6,3 +6,6 @@ Allow: /
 
 # Crawl-delay (optional - helps prevent server overload)
 Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://peetee09.github.io/LaTonisi/sitemap.xml
