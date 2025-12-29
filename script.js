@@ -121,7 +121,7 @@ const quickEnquiryForm = document.getElementById('quickEnquiryForm');
 if (quickEnquiryForm) {
     quickEnquiryForm.addEventListener('submit', function(e) {
         // Allow form to submit naturally to FormSubmit.co
-        // Form will POST to info@latonisi.co.za via FormSubmit service
+        // Form will POST to secure FormSubmit endpoint
         console.log('Quick Enquiry Form submitted');
     });
 }
@@ -131,7 +131,7 @@ const fullEnquiryForm = document.getElementById('fullEnquiryForm');
 if (fullEnquiryForm) {
     fullEnquiryForm.addEventListener('submit', function(e) {
         // Allow form to submit naturally to FormSubmit.co
-        // Form will POST to info@latonisi.co.za via FormSubmit service
+        // Form will POST to secure FormSubmit endpoint
         console.log('Full Enquiry Form submitted');
     });
 }
