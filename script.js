@@ -120,20 +120,9 @@ window.addEventListener('scroll', () => {
 const quickEnquiryForm = document.getElementById('quickEnquiryForm');
 if (quickEnquiryForm) {
     quickEnquiryForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(quickEnquiryForm);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would typically send the data to a server
-        console.log('Quick Enquiry Form Data:', data);
-        
-        // Show success message
-        alert('Thank you for your enquiry! We will get back to you within 24 hours.');
-        
-        // Reset form
-        quickEnquiryForm.reset();
+        // Allow form to submit naturally to FormSubmit.co
+        // Form will POST to info@latonisi.co.za via FormSubmit service
+        console.log('Quick Enquiry Form submitted');
     });
 }
 
@@ -141,19 +130,30 @@ if (quickEnquiryForm) {
 const fullEnquiryForm = document.getElementById('fullEnquiryForm');
 if (fullEnquiryForm) {
     fullEnquiryForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(fullEnquiryForm);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would typically send the data to a server
-        console.log('Full Enquiry Form Data:', data);
-        
-        // Show success message
-        alert('Thank you for your detailed enquiry! Our team will review your information and contact you within 24 hours using your preferred method.');
-        
-        // Reset form
-        fullEnquiryForm.reset();
+        // Allow form to submit naturally to FormSubmit.co
+        // Form will POST to info@latonisi.co.za via FormSubmit service
+        console.log('Full Enquiry Form submitted');
     });
 }
+
+// Check for form submission success and show message
+window.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+        // Show success message
+        const successMessage = document.createElement('div');
+        successMessage.style.cssText = 'position: fixed; top: 100px; left: 50%; transform: translateX(-50%); background: #4CAF50; color: white; padding: 20px 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 10000; text-align: center; max-width: 90%;';
+        successMessage.innerHTML = '<strong>Thank you for your enquiry!</strong><br>We will get back to you within 24 hours.';
+        document.body.appendChild(successMessage);
+        
+        // Remove success message after 5 seconds
+        setTimeout(() => {
+            successMessage.style.transition = 'opacity 0.5s';
+            successMessage.style.opacity = '0';
+            setTimeout(() => successMessage.remove(), 500);
+        }, 5000);
+        
+        // Clean up URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+});
