@@ -148,8 +148,8 @@ window.addEventListener('DOMContentLoaded', function() {
         
         // Remove success message after 5 seconds
         setTimeout(() => {
-            successMessage.style.opacity = '0';
             successMessage.style.transition = 'opacity 0.5s';
+            successMessage.style.opacity = '0';
             setTimeout(() => successMessage.remove(), 500);
         }, 5000);
         
