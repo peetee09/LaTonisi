@@ -276,7 +276,7 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(3px);
+    filter: blur(1px);
     transform: scale(1.1);
     pointer-events: none;
     z-index: 0;
