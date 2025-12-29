@@ -84,8 +84,8 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
             position: relative;
             z-index: 1;
         }
@@ -176,6 +176,23 @@
         .pricing-features li i {
             color: var(--primary-red);
             margin-right: 12px;
+        }
+
+        @media (max-width: 1400px) {
+            .pricing-grid {
+                gap: 16px;
+            }
+            
+            .pricing-card {
+                padding: 32px 20px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
         }
 
         @media (max-width: 768px) {
