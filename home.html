@@ -311,7 +311,13 @@
                     <h3>Quick Enquiry</h3>
                     <p>Interested in our services? Fill out this quick form and we'll get back to you within 24 hours.</p>
                     
-                    <form id="quickEnquiryForm">
+                    <form id="quickEnquiryForm" action="https://formsubmit.co/info@latonisi.co.za" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Quick Enquiry - LaTonisi">
+                        <input type="hidden" name="_next" value="https://peetee09.github.io/LaTonisi/home.html?submitted=true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>

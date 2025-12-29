@@ -171,7 +171,13 @@
                     <h2>Complete Enquiry Form</h2>
                     <p class="intro-text">Please fill out this comprehensive form so we can better understand your needs and provide you with tailored solutions. All information is kept strictly confidential.</p>
                     
-                    <form id="fullEnquiryForm">
+                    <form id="fullEnquiryForm" action="https://formsubmit.co/info@latonisi.co.za" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Full Enquiry - LaTonisi Business Consultants">
+                        <input type="hidden" name="_next" value="https://peetee09.github.io/LaTonisi/enquiry.html?submitted=true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <!-- Personal Information -->
                         <div class="form-section">
                             <h3>Personal Information</h3>
