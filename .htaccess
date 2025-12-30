@@ -56,6 +56,6 @@
     
     # HTML
     <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "no-cache, must-revalidate"
+        Header set Cache-Control "public, max-age=0, must-revalidate"
     </FilesMatch>
 </IfModule>
