@@ -8,4 +8,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://peetee09.github.io/LaTonisi/sitemap.xml
+Sitemap: https://www.latonisi.co.za/sitemap.xml
