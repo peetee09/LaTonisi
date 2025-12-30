@@ -122,7 +122,6 @@ if (quickEnquiryForm) {
     quickEnquiryForm.addEventListener('submit', function(e) {
         // Allow form to submit naturally to FormSubmit.co
         // Form will POST to info@latonisi.co.za via FormSubmit service
-        console.log('Quick Enquiry Form submitted');
     });
 }
 
@@ -132,7 +131,6 @@ if (fullEnquiryForm) {
     fullEnquiryForm.addEventListener('submit', function(e) {
         // Allow form to submit naturally to FormSubmit.co
         // Form will POST to info@latonisi.co.za via FormSubmit service
-        console.log('Full Enquiry Form submitted');
     });
 }
 
