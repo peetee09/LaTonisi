@@ -137,7 +137,43 @@ https://www.latonisi.co.za/email-test.html
 
 ---
 
-**Pro Tip:** Create a ZIP file of only the required files and upload it to cPanel, then extract it directly in File Manager. This is faster than uploading files individually.
+## 📦 Pre-packaged Deployment ZIP (Recommended)
+
+**File:** `latonisi-cpanel-deployment.zip`
+
+This is a ready-to-deploy ZIP file that includes all required files and:
+- ✅ Extracts files directly to the current directory (no nested folder)
+- ✅ Maintains proper directory structure (.well-known folder)
+- ✅ Includes all required production files
+- ✅ Excludes development and documentation files
+
+### How to Use:
+1. Download `latonisi-cpanel-deployment.zip` from the repository
+2. Upload to cPanel File Manager in `public_html`
+3. Right-click the ZIP file and select "Extract"
+4. Files will be placed directly in `public_html` without creating an extra folder
+5. Delete the ZIP file after extraction
+
+### Regenerating the Deployment ZIP:
+If you make changes to the website, you can regenerate the deployment ZIP by running:
+```bash
+./create-cpanel-deployment.sh
+```
+
+This script ensures the ZIP is created correctly without nested folder structure.
+
+---
+
+## 🚨 Common ZIP File Issues
+
+**Problem:** When creating your own ZIP file, extraction creates a nested folder (e.g., "LaTonisi/index.html" instead of "index.html")
+
+**Cause:** The ZIP archive includes a parent folder structure.
+
+**Solution:** 
+- Use the provided `latonisi-cpanel-deployment.zip`
+- Or run `./create-cpanel-deployment.sh` to create a new one
+- Or when creating manually, ensure files are at the root level of the ZIP, not inside a folder
 
 ---
 

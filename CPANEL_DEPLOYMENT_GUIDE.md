@@ -38,14 +38,26 @@ Ensure you have all these files ready:
 
 ### 3. Upload Files
 
-#### Option A: Upload via File Manager (Recommended for First Time)
+#### Option A: Upload Pre-packaged ZIP (Recommended - Fastest & Easiest)
+1. Download `latonisi-cpanel-deployment.zip` from the repository
+2. In cPanel File Manager, navigate to `public_html` directory
+3. Click **Upload** button
+4. Upload the `latonisi-cpanel-deployment.zip` file
+5. After upload completes, right-click on the ZIP file
+6. Select **Extract**
+7. The files will extract directly to `public_html` (no nested folder created)
+8. Delete the ZIP file after extraction to save space
+
+**Note:** This ZIP is specially created to extract files correctly without creating an extra folder.
+
+#### Option B: Upload Individual Files via File Manager
 1. In File Manager, click **Upload** button
 2. Select and upload all required files listed above
 3. Make sure to maintain the directory structure:
    - Create `.well-known/` folder and upload `security.txt` inside it
    - All other files go in the root `public_html` directory
 
-#### Option B: Upload via FTP
+#### Option C: Upload via FTP
 1. Use an FTP client like FileZilla
 2. Connect to your hosting account
 3. Navigate to `public_html`
