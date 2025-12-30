@@ -2,7 +2,24 @@
 
 Professional business consulting services website.
 
-## 🚀 Deployment on Railway
+## 🚀 Deployment Options
+
+### Deploy to cPanel (Production - www.latonisi.co.za)
+
+**Quick Deploy with Pre-built Package:**
+1. Download `latonisi-cpanel-deployment.zip` from this repository
+2. Upload to cPanel File Manager (`public_html` directory)
+3. Extract the ZIP file - files will be placed directly without creating a nested folder
+4. See [CPANEL_DEPLOYMENT_GUIDE.md](CPANEL_DEPLOYMENT_GUIDE.md) for complete instructions
+
+**Build Custom Deployment Package:**
+```bash
+./create-cpanel-deployment.sh
+```
+
+See [DEPLOYMENT_PACKAGE_README.md](DEPLOYMENT_PACKAGE_README.md) for details.
+
+### Deploy to Railway (Development/Staging)
 
 This site is configured for easy deployment on [Railway](https://railway.app/).
 
