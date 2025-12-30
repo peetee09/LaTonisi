@@ -31,16 +31,22 @@
     <link rel="canonical" href="https://peetee09.github.io/LaTonisi/home.html">
     
     <!-- Preconnect to external domains for faster loading -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://formsubmit.co">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="logo.png" as="image">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
     
     <title>LaTonisi Business Consultants | Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="styles.css">
     
     <!-- JSON-LD Structured Data for LocalBusiness -->
@@ -96,7 +102,7 @@
     <a href="https://wa.me/27788209586" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
     </a>
 
-    <!-- Header -->
+    <!-- Header (Navigation) -->
     <header>
         <div class="container header-container">
             <div class="logo-container">
@@ -126,6 +132,8 @@
         </div>
     </header>
 
+    <!-- Main Content -->
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -370,6 +378,8 @@
             </div>
         </div>
     </section>
+    </main>
+    <!-- End Main Content -->
 
     <!-- Footer -->
     <footer>
@@ -452,6 +462,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
