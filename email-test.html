@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Configuration Test - LaTonisi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            color: #1976D2;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .info-box p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        
+        .warning-box h3 {
+            color: #856404;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .checklist {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .checklist h3 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .checklist li:before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Email Test Form</h1>
+        <p class="subtitle">Test the LaTonisi email configuration</p>
+        
+        <div class="warning-box">
+            <h3>⚠️ Important: First-Time Setup Required</h3>
+            <p>If this is your first form submission to <strong>info@latonisi.co.za</strong>, you must verify the email:</p>
+            <ol style="margin-top: 10px; margin-left: 20px; color: #856404;">
+                <li>Submit this form once</li>
+                <li>Check the inbox of info@latonisi.co.za</li>
+                <li>Look for "Activate your form on FormSubmit" email</li>
+                <li>Click the activation link</li>
+            </ol>
+        </div>
+        
+        <div class="info-box">
+            <h3>ℹ️ What This Test Will Verify</h3>
+            <p>This test form will verify that:</p>
+        </div>
+        
+        <div class="checklist">
+            <h3>Configuration Checklist:</h3>
+            <ul>
+                <li>Form submits to info@latonisi.co.za</li>
+                <li>Captcha protection is enabled</li>
+                <li>Auto-response is sent to the user</li>
+                <li>Honeypot spam protection is active</li>
+                <li>Email can be replied to directly</li>
+            </ul>
+        </div>
+        
+        <form action="https://formsubmit.co/info@latonisi.co.za" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="TEST - Email Configuration Check - LaTonisi">
+            <input type="hidden" name="_next" value="https://peetee09.github.io/LaTonisi/email-test.html?success=true">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_autoresponse" value="TEST EMAIL: Thank you! This confirms that LaTonisi's email system is working. You should also receive the actual enquiry at info@latonisi.co.za.">
+            <input type="text" name="_honey" style="display:none">
+            
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                <small style="color: #666; font-size: 12px;">You'll receive an auto-response here</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="testType">Test Type</label>
+                <select id="testType" name="testType">
+                    <option value="initial-verification">Initial Email Verification</option>
+                    <option value="configuration-test">Configuration Test</option>
+                    <option value="autoresponse-test">Auto-response Test</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Test Message *</label>
+                <textarea id="message" name="message" required placeholder="This is a test of the email configuration...">This is a test email to verify the FormSubmit.co configuration for LaTonisi Business Consultants.</textarea>
+            </div>
+            
+            <button type="submit">Send Test Email</button>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            <strong>✅ Test Submitted!</strong><br>
+            Check both inboxes:
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>info@latonisi.co.za (should receive the enquiry)</li>
+                <li>Your email (should receive auto-response)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Show success message if redirected back
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                document.getElementById('successMessage').style.display = 'block';
+                window.scrollTo(0, document.body.scrollHeight);
+                
+                // Clean up URL
+                setTimeout(() => {
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
