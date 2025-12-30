@@ -9,8 +9,7 @@ echo "Creating cPanel deployment package..."
 rm -f latonisi-cpanel-deployment.zip
 
 # Create ZIP file with files at root level (no nested folder)
-# The -j flag tells zip to store files without directory structure
-# However, we need to preserve the .well-known directory structure
+# We use a temporary directory staging approach to ensure proper structure
 
 # First, create a temporary directory for staging
 TEMP_DIR=$(mktemp -d)
@@ -20,29 +19,16 @@ echo "Using temporary directory: $TEMP_DIR"
 echo "Copying files..."
 
 # HTML files
-cp index.html "$TEMP_DIR/"
-cp home.html "$TEMP_DIR/"
-cp services.html "$TEMP_DIR/"
-cp pricing.html "$TEMP_DIR/"
-cp founder.html "$TEMP_DIR/"
-cp enquiry.html "$TEMP_DIR/"
-cp email-test.html "$TEMP_DIR/"
+cp index.html home.html services.html pricing.html founder.html enquiry.html email-test.html "$TEMP_DIR/"
 
 # CSS and JavaScript
-cp styles.css "$TEMP_DIR/"
-cp script.js "$TEMP_DIR/"
+cp styles.css script.js "$TEMP_DIR/"
 
 # Images
-cp logo.png "$TEMP_DIR/"
-cp mzwakhe.jpg "$TEMP_DIR/"
-cp rebecca.jpeg "$TEMP_DIR/"
-cp office-team.jpeg "$TEMP_DIR/"
-cp office2-latonisi.jpeg "$TEMP_DIR/"
+cp logo.png mzwakhe.jpg rebecca.jpeg office-team.jpeg office2-latonisi.jpeg "$TEMP_DIR/"
 
 # Configuration files
-cp .htaccess "$TEMP_DIR/"
-cp robots.txt "$TEMP_DIR/"
-cp sitemap.xml "$TEMP_DIR/"
+cp .htaccess robots.txt sitemap.xml "$TEMP_DIR/"
 
 # Security directory structure
 mkdir -p "$TEMP_DIR/.well-known"
@@ -73,3 +59,5 @@ echo "3. Navigate to public_html directory"
 echo "4. Click 'Extract' on the ZIP file"
 echo "5. Files will be extracted directly to public_html (no nested folder)"
 echo ""
+
+exit 0
