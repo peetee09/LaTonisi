@@ -99,6 +99,8 @@ This document details all the performance optimizations implemented to improve t
   <link rel="dns-prefetch" href="https://www.google.com">
   <link rel="dns-prefetch" href="https://formsubmit.co">
   ```
+  
+  Note: formsubmit.co dns-prefetch only added to pages with forms (home.html, enquiry.html)
 
 **Impact:** Reduced DNS lookup and connection time for external resources.
 
