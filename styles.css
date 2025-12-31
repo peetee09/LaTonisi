@@ -97,7 +97,7 @@ header:hover {
 }
 
 .logo-image {
-    height: 60px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     transition: var(--transition);
@@ -732,7 +732,7 @@ footer::before {
     }
     
     .logo-image {
-        height: 40px;
+        height: 55px;
     }
     
     .logo-main {
