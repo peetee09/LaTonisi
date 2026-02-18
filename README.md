@@ -59,6 +59,7 @@ The site will be available at `http://localhost:3000`
 - `home.html` - Main homepage
 - `services.html` - Services page
 - `pricing.html` - Pricing information
+- `buy-online.html` - Online purchase page for services
 - `founder.html` - Founder information
 - `enquiry.html` - Enquiry form
 - `styles.css` - Main stylesheet
